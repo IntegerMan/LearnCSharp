@@ -1,0 +1,81 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!markdown
+
+# While Loops & Do .. While Loops
+
+When you don't know how many times you want to loop or don't need the complexity of a for loop
+
+#!markdown
+
+## While Loops
+While loops may execute zero or many times
+
+#!csharp
+
+Random rand = new();
+int monsterHp = 5;
+
+Console.WriteLine("A battle is starting versus a monster with " + monsterHp + " hit points");
+while (monsterHp > 0)
+{
+    int damage = rand.Next(1, 6);
+    monsterHp -= damage;
+
+    Console.WriteLine("Monster was damaged for " + damage + " damage. Its health is now " + monsterHp);
+}
+
+Console.WriteLine("The monster has been defeated!");
+
+#!markdown
+
+## Do .. While Loops
+Do while loops always execute at least once
+
+#!csharp
+
+#!import ../Helpers/InputHelper.cs
+
+#!csharp
+
+int secretNumber = rand.Next(1, 6);
+int guess;
+
+Console.WriteLine("I'm thinking of a number between 1 and 5.");
+
+do 
+{
+    guess = GetNumber();
+    Console.WriteLine("You guessed " + guess);
+
+    if (guess > secretNumber) {
+        Console.WriteLine("You're too high!");
+    } else if (guess < secretNumber) {
+        Console.WriteLine("You're too low!");
+    } else {
+        Console.WriteLine("That's it!");
+    }
+} while (guess != secretNumber);
+
+#!markdown
+
+## While Loops as For Loops
+
+#!csharp
+
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+#!csharp
+
+int i = 1;
+while (i <= 5)
+{
+    Console.WriteLine(i);
+
+    i++;
+}

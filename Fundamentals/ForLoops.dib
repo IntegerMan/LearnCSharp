@@ -6,12 +6,28 @@
 
 # For Loops
 
+#!markdown
+
+## Why for loops?
+
+Because doing things repetitively sucks!
+
+#!csharp
+
+Console.WriteLine("1");
+Console.WriteLine("2");
+Console.WriteLine("3");
+Console.WriteLine("4");
+Console.WriteLine("5");
+
+#!markdown
+
 ## Basic for loops in C#
 
 #!csharp
 
-for (int i = 0; i < 5; i++) {
-    Console.WriteLine(i);
+for (int i = 0 ; i < 5 ; i++) {
+    Console.WriteLine(i + 1);
 }
 
 #!markdown
@@ -35,14 +51,20 @@ flowchart TD
 
 ## Looping over odd numbers
 
+#!csharp
+
+for (int i = 0; i < 15; i += 2)
+{
+    Console.WriteLine(i);
+}
+
 #!markdown
 
 ## Looping backwards
 
 #!csharp
 
-string drink = "Diet Doctor Pepper";
-
-for (int i = 99; i > 0; i--) {
-    Console.WriteLine($"{i} bottles of {drink} on the wall");
+for (int i = 99; i > 0; i--)
+{
+    Console.WriteLine(i + " cans of Diet Doctor Pepper in Matt's fridge");
 }
