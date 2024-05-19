@@ -1,0 +1,48 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!markdown
+
+# For Loops
+
+## Basic for loops in C#
+
+#!csharp
+
+for (int i = 0; i < 5; i++) {
+    Console.WriteLine(i);
+}
+
+#!markdown
+
+## How for loops work
+
+#!mermaid
+
+flowchart TD
+    Start --> init
+    subgraph inLoop[In Loop]
+        init[Initialize loop variable]
+        init --> check{Condition is true?}
+        check -- true --> execute[Execute code in braces]
+        execute --> increment[Adjust loop variable]
+        increment --> check
+    end
+    check -- false --> exit((Loop complete))
+
+#!markdown
+
+## Looping over odd numbers
+
+#!markdown
+
+## Looping backwards
+
+#!csharp
+
+string drink = "Diet Doctor Pepper";
+
+for (int i = 99; i > 0; i--) {
+    Console.WriteLine($"{i} bottles of {drink} on the wall");
+}
